@@ -1,12 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Post } from '../../models/post.model';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Post } from '../../models/post.model';
 
 @Component({
   selector: 'app-list-posts',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgbModule],
   templateUrl: './list-posts.component.html',
   styleUrl: './list-posts.component.css',
 })
