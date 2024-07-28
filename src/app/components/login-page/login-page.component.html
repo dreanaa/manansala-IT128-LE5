@@ -1,7 +1,7 @@
 <div>
 	<h1>Welcome Back</h1>
 	<h3>Login Here</h3>
-	<form name="form" (ngSubmit)="onSubmit()" #f="nForm" novalidate>
+	<form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
 		<div>
 			<label for="username">Username</label>
 			<input required type="text" name="username" [(ngModel)]="form.username" #username="ngModel" />

@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { TokenStorageService } from '../../services/token-storage.service';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './login-page.component.html',
   styleUrl: './login-page.component.css'
 })
@@ -17,12 +19,9 @@ export class LoginPageComponent implements OnInit {
     password: null
   }
 
-  constructor(
-    private authService: AuthService,
+  constructor(private authService: AuthService,
     private tokenStorage: TokenStorageService,
-    private http: HttpClient,
-    private router: Router
-  ) {}
+    private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {

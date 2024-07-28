@@ -19,7 +19,9 @@ export class TokenStorageService {
   }
 
   public getToken(): string | null {
-    return window.sessionStorage.getItem(TOKEN_KEY);
+    if(typeof window !== "undefined") {
+      return window.sessionStorage.getItem(TOKEN_KEY);
+    } else return null;
   }
   public saveUser(id: number): void {
     let strId = id.toString();
