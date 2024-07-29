@@ -1,13 +1,16 @@
-<div>
-	<h1>Welcome Back</h1>
-	<h3>Login Here</h3>
-	<form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
-		<div>
-			<label for="username">Username</label>
-			<input required type="text" name="username" [(ngModel)]="form.username" #username="ngModel" />
-			<label for="password">Password</label>
-			<input required type="password" name="password" [(ngModel)]="form.password" #password="ngModel" />
-		</div>
-		<button>Submit</button>
-	</form>
-</div>
+<h1 class="display-1">Login Here!</h1>
+<h3><small class="text-body-secondary">We're happy to have you back</small></h3>
+
+<form name="form" (ngSubmit)="onSubmit()" #f="ngForm" novalidate>
+	<div class="mb-3">
+		<label class="form-label" for="username">Username:</label>
+		<input class="form-control" required type="text" name="username" [(ngModel)]="form.username" #username="ngModel" />
+	</div>
+	
+	<div class="mb-3">
+		<label class="form-label" for="password">Password:</label>
+		<input class="form-control" required type="password" name="password" [(ngModel)]="form.password" #password="ngModel" />
+	</div>
+
+	<button class="btn btn-primary btn-lg">Submit</button>
+</form>

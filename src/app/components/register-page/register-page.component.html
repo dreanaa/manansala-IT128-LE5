@@ -1,15 +1,26 @@
+<h1 class="display-1">Register Now!</h1>
+<h3><small class="text-body-secondary">We're happy to have you here</small></h3>
+
 <form name="form" (ngSubmit)="onSubmit()" #f="ngForm">
-	<label for="username">Username</label>
-	<input required type="text" name="username" [(ngModel)]="form.username" #username="ngModel" />
+	<div class="mb-3">
+		<label for="username" class="form-label">Username:</label>
+		<input class="form-control" required type="text" name="username" [(ngModel)]="form.username" #username="ngModel" />
+	</div>
 
-	<label for="password">Password</label>
-	<input required type="password" name="password" [(ngModel)]="form.password" #password="ngModel" />
+	<div class="mb-3">
+		<label for="password" class="form-label">Password:</label>
+		<input class="form-control" required type="password" name="password" [(ngModel)]="form.password" #password="ngModel" />
+	</div>
 	
-	<label for="firstName">First Name</label>
-	<input required type="text" name="firstName" [(ngModel)]="form.firstName" #firstName="ngModel" />
+	<div class="mb-3">
+		<label for="firstName" class="form-label">First Name:</label>
+		<input class="form-control" required type="text" name="firstName" [(ngModel)]="form.firstName" #firstName="ngModel" />
+	</div>
 
-	<label for="lastName">Last Name</label>
-	<input required type="text" name="lastName" [(ngModel)]="form.lastName" #lastName="ngModel" />
+	<div class="mb-3">
+		<label for="lastName" class="form-label">Last Name:</label>
+		<input class="form-control" required type="text" name="lastName" [(ngModel)]="form.lastName" #lastName="ngModel" />
+	</div>
 
-	<button>Submit</button>
+	<button	class="btn btn-primary btn-lg" type="submit">Submit</button>
 </form>

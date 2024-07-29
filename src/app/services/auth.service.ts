@@ -2,15 +2,18 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   isLoggedIn: boolean = false;
-  public redirectUrl: string = "";
+  public redirectUrl: string = '';
 
   constructor(private http: HttpClient) {}
 
-  login (username: string, password: string) {
-    return this.http.post<string>("http://localhost:7001/api/Login/login", {username, password});
+  login(username: string, password: string) {
+    return this.http.post<string>('http://localhost:7001/api/Login/login', {
+      username,
+      password,
+    });
   }
 }
