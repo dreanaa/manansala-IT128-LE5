@@ -1,3 +1,9 @@
+<h1>Welcome to the Post Repository</h1>
+<h3>Enjoy your stay here...</h3>
+<div class="float-end">
+	<a href="/login"><button class="btn btn-primary">Login</button></a>
+	<a href="/register"><button class="btn btn-light">Register</button></a>
+</div>
 <div *ngFor="let post of posts">
 	<h3><a href="/posts/{{ post.id }}">{{ post.title }}</a></h3>
 	<p>by {{ post.firstName }} {{ post.lastName }}, on {{ post.dateCreated }}</p>
